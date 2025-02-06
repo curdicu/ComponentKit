@@ -17,7 +17,8 @@ let package = Package(
             .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1")),
             .package(url: "https://github.com/horizontalsystems/HUD.Swift.git", .upToNextMajor(from: "2.0.0")),
             .package(url: "https://github.com/horizontalsystems/SectionsTableView.Swift.git", .upToNextMajor(from: "1.0.0")),
-            .package(url: "https://github.com/horizontalsystems/ThemeKit.Swift.git", .upToNextMajor(from: "2.0.0")),
+            .package(url: "https://github.com/curdicu/ThemeKit.git" , .upToNextMajor(from: "1.0.0")),
+//            .package(url: "https://github.com/horizontalsystems/ThemeKit.Swift.git", .upToNextMajor(from: "2.0.0")),
             .package(url: "https://github.com/horizontalsystems/UIExtensions.Swift.git", .upToNextMajor(from: "1.0.0")),
         ],
         targets: [
@@ -28,7 +29,8 @@ let package = Package(
                         "SnapKit",
                         .product(name: "HUD", package: "HUD.Swift"),
                         .product(name: "SectionsTableView", package: "SectionsTableView.Swift"),
-                        .product(name: "ThemeKit", package: "ThemeKit.Swift"),
+//                        .product(name: "ThemeKit", package: "ThemeKit.Swift"),
+                        .product(name: "ThemeKit", package: "ThemeKit"),
                         .product(name: "UIExtensions", package: "UIExtensions.Swift"),
                     ]
             ),

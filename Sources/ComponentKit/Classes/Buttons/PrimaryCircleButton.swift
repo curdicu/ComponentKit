@@ -42,6 +42,10 @@ open class PrimaryCircleButton: UIButton {
             setImage(imageView?.image?.withTintColor(.themeDark), for: .normal)
             setBackgroundColor(.themeYellowD, for: .normal)
             setBackgroundColor(.themeYellow50, for: .highlighted)
+        case .black:
+            setImage(imageView?.image?.withTintColor(.themeDark), for: .normal)
+            setBackgroundColor(.themeBlack, for: .normal)
+            setBackgroundColor(.themeBlack50, for: .highlighted)
         case .red:
             setBackgroundColor(.themeLucian, for: .normal)
             setBackgroundColor(.themeRed50, for: .highlighted)
@@ -53,6 +57,7 @@ open class PrimaryCircleButton: UIButton {
 
     public enum Style {
         case yellow
+        case black
         case red
         case gray
     }

@@ -46,6 +46,10 @@ open class PrimaryButton: UIButton {
             setBackgroundColor(.themeYellowD, for: .normal)
             setBackgroundColor(.themeYellow50, for: .highlighted)
             setBackgroundColor(.themeSteel20, for: .disabled)
+        case .black:
+            setBackgroundColor(.themeBlack, for: .normal)
+            setBackgroundColor(.themeBlack, for: .highlighted)
+            setBackgroundColor(.themeBlack50, for: .disabled)
         case .red:
             setBackgroundColor(.themeLucian, for: .normal)
             setBackgroundColor(.themeRed50, for: .highlighted)
@@ -65,6 +69,10 @@ open class PrimaryButton: UIButton {
             setTitleColor(.themeDark, for: .normal)
             setTitleColor(.themeDark, for: .highlighted)
             setTitleColor(.themeGray50, for: .disabled)
+        case .black:
+            setTitleColor(.themeWhite, for: .normal)
+            setTitleColor(.themeWhite, for: .highlighted)
+            setTitleColor(.themeWhite50, for: .disabled)
         case .red, .gray:
             setTitleColor(.themeClaude, for: .normal)
             setTitleColor(.themeClaude, for: .highlighted)
@@ -79,6 +87,10 @@ open class PrimaryButton: UIButton {
         case .icon(let image):
             switch style {
             case .yellow:
+                setImage(image?.withTintColor(.themeDark), for: .normal)
+                setImage(image?.withTintColor(.themeDark), for: .highlighted)
+                setImage(image?.withTintColor(.themeGray50), for: .disabled)
+            case .black:
                 setImage(image?.withTintColor(.themeDark), for: .normal)
                 setImage(image?.withTintColor(.themeDark), for: .highlighted)
                 setImage(image?.withTintColor(.themeGray50), for: .disabled)
@@ -123,6 +135,7 @@ open class PrimaryButton: UIButton {
 
     public enum Style {
         case yellow
+        case black
         case red
         case gray
         case transparent
