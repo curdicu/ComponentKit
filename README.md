@@ -8,7 +8,7 @@ UI components
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/horizontalsystems/ComponentKit.Swift.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/curdicu/ComponentKit.git", .branch("main"))
 ]
 ```
 
