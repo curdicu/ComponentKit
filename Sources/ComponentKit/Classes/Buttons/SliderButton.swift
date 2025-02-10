@@ -124,10 +124,13 @@ open class SliderButton: UIView {
     }
 
     private func syncState() {
-        fillView.backgroundColor = isEnabled ? .themeYellowD.withAlphaComponent(0.5) : .themeSteel10
-        circleView.backgroundColor = isEnabled ? .themeYellowD : .themeSteel20
-        slideImageView.image = slideImageView.image?.withTintColor(isEnabled ? .themeDark : .themeGray50)
-        label.textColor = isEnabled ? .themeGray : .themeGray50
+//        fillView.backgroundColor = isEnabled ? .themeYellowD.withAlphaComponent(0.5) : .themeSteel10
+        fillView.backgroundColor = isEnabled ? .themeBlack.withAlphaComponent(0.5) : .themeSteel10
+//        circleView.backgroundColor = isEnabled ? .themeYellowD : .themeSteel20
+        circleView.backgroundColor = isEnabled ? .themeBlack : .themeSteel20
+//        slideImageView.image = slideImageView.image?.withTintColor(isEnabled ? .themeDark : .themeGray50)
+        slideImageView.image = slideImageView.image?.withTintColor(isEnabled ? .themeLight : .themeGray50)
+        label.textColor = isEnabled ? .themeLight : .themeGray50
 
         reset()
     }
@@ -233,7 +236,8 @@ open class SliderButton: UIView {
 
     public var finalImage: UIImage? {
         get { finalImageView.image }
-        set { finalImageView.image = newValue?.withTintColor(.themeDark) }
+//        set { finalImageView.image = newValue?.withTintColor(.themeDark) }
+        set { finalImageView.image = newValue?.withTintColor(.themeLight) }
     }
 
     public func reset() {
