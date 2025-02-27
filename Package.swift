@@ -19,7 +19,7 @@ let package = Package(
             .package(url: "https://github.com/curdicu/SectionsTableView.git", .branch("main")),
             .package(url: "https://github.com/curdicu/ThemeKit.git" , .branch("main")),
             // .package(url: "https://github.com/curdicu/UIExtensions.git", .branch( "main")),
-            .package(url: "https://github.com/horizontalsystems/HsExtensions.Swift.git", .upToNextMajor(from: "1.0.6")),
+            .package(url: "https://github.com/horizontalsystems/UIExtensions.Swift.git", .upToNextMajor(from: "1.0.0")),
         ],
         targets: [
             .target(
@@ -30,7 +30,7 @@ let package = Package(
                         .product(name: "HUD", package: "HUD"),
                         .product(name: "SectionsTableView", package: "SectionsTableView"),
                         .product(name: "ThemeKit", package: "ThemeKit"),
-                        .product(name: "UIExtensions", package: "HsExtensions.Swift"),
+                        .product(name: "UIExtensions", package: "UIExtensions.Swift"),
                     ]
             ),
         ]
