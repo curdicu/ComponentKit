@@ -18,7 +18,6 @@ let package = Package(
             .package(url: "https://github.com/curdicu/HUD.git", .branch("main")),
             .package(url: "https://github.com/curdicu/SectionsTableView.git", .branch("main")),
             .package(url: "https://github.com/curdicu/ThemeKit.git" , .branch("main")),
-            // .package(url: "https://github.com/curdicu/UIExtensions.git", .branch( "main")),
             .package(url: "https://github.com/horizontalsystems/UIExtensions.Swift.git", .upToNextMajor(from: "1.0.0")),
         ],
         targets: [
