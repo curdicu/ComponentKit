@@ -62,6 +62,14 @@ open class PrimaryButton: UIButton {
             setBackgroundColor(.clear, for: .normal)
             setBackgroundColor(.clear, for: .highlighted)
             setBackgroundColor(.clear, for: .disabled)
+        case .lightCyan:
+            setBackgroundColor(.themeCyanD, for: .normal)
+            setBackgroundColor(.themeCyanD, for: .highlighted)
+            setBackgroundColor(.themeSteel20, for: .disabled)
+        case .blackYellow:
+            setBackgroundColor(.themeBlack, for: .normal)
+            setBackgroundColor(.themeBlack, for: .highlighted)
+            setBackgroundColor(.themeBlack50, for: .disabled)
         }
 
         switch style {
@@ -80,6 +88,14 @@ open class PrimaryButton: UIButton {
         case .transparent:
             setTitleColor(.themeLeah, for: .normal)
             setTitleColor(.themeGray, for: .highlighted)
+            setTitleColor(.themeGray50, for: .disabled)
+        case .lightCyan:
+            setTitleColor(.themeDark, for: .normal)
+            setTitleColor(.themeDark, for: .highlighted)
+            setTitleColor(.themeGray50, for: .disabled)
+        case .blackYellow:
+            setTitleColor(.themeYellowY, for: .normal)
+            setTitleColor(.themeYellowY, for: .highlighted)
             setTitleColor(.themeGray50, for: .disabled)
         }
 
@@ -101,6 +117,14 @@ open class PrimaryButton: UIButton {
             case .transparent:
                 setImage(image?.withTintColor(.themeLeah), for: .normal)
                 setImage(image?.withTintColor(.themeGray), for: .highlighted)
+                setImage(image?.withTintColor(.themeGray50), for: .disabled)
+            case .lightCyan:
+                setImage(image?.withTintColor(.themeDark), for: .normal)
+                setImage(image?.withTintColor(.themeDark), for: .highlighted)
+                setImage(image?.withTintColor(.themeGray50), for: .disabled)
+            case .blackYellow:
+                setImage(image?.withTintColor(.themeYellowY), for: .normal)
+                setImage(image?.withTintColor(.themeYellowY), for: .highlighted)
                 setImage(image?.withTintColor(.themeGray50), for: .disabled)
             }
 
@@ -139,6 +163,8 @@ open class PrimaryButton: UIButton {
         case red
         case gray
         case transparent
+        case lightCyan
+        case blackYellow
     }
 
     public enum AccessoryType {
