@@ -27,6 +27,9 @@ open class PrimaryCircleButton: UIButton {
         if let style = style, case .yellow = style {
             setImage(image?.withTintColor(.themeDark), for: .normal)
             setImage(image?.withTintColor(.themeDark), for: .highlighted)
+        } else if let style = style, case .cyan = style {
+            setImage(image?.withTintColor(.themeDark), for: .normal)
+            setImage(image?.withTintColor(.themeDark), for: .highlighted)
         } else {
             setImage(image?.withTintColor(.themeClaude), for: .normal)
             setImage(image?.withTintColor(.themeClaude), for: .highlighted)
@@ -52,6 +55,9 @@ open class PrimaryCircleButton: UIButton {
         case .gray:
             setBackgroundColor(.themeLeah, for: .normal)
             setBackgroundColor(.themeNina, for: .highlighted)
+        case .cyan:
+            setBackgroundColor(.themeCyanD, for: .normal)
+            setBackgroundColor(.themeCyanD, for: .highlighted)
         }
     }
 
@@ -60,6 +66,7 @@ open class PrimaryCircleButton: UIButton {
         case black
         case red
         case gray
+        case cyan
     }
 
 }
