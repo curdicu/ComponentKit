@@ -69,7 +69,7 @@ open class PrimaryButton: UIButton {
         case .blackYellow:
             setBackgroundColor(.themeBlack, for: .normal)
             setBackgroundColor(.themeBlack, for: .highlighted)
-            setBackgroundColor(.themeBlack50, for: .disabled)
+            setBackgroundColor(.themeSteel20, for: .disabled)
         }
 
         switch style {
