@@ -23,6 +23,8 @@ public class SwitchComponent: UIView {
 //        switchView.onTintColor = .themeYellowD
         switchView.onTintColor = .themeBlack
         switchView.addTarget(self, action: #selector(onToggle), for: .valueChanged)
+        
+        blockSwitch?(switchView)
     }
 
     required public init?(coder aDecoder: NSCoder) {
