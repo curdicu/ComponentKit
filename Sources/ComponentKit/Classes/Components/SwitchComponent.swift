@@ -5,6 +5,8 @@ public class SwitchComponent: UIView {
     public let switchView = UISwitch()
 
     public var onSwitch: ((Bool) -> ())?
+    
+    public var blockSwitch: ((UISwitch) -> ())?
 
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,6 +31,7 @@ public class SwitchComponent: UIView {
 
     @objc private func onToggle() {
         onSwitch?(switchView.isOn)
+        blockSwitch?(switchView)
     }
 
 }
