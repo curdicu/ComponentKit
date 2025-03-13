@@ -94,8 +94,8 @@ open class PrimaryButton: UIButton {
             setTitleColor(.themeDark, for: .highlighted)
             setTitleColor(.themeGray50, for: .disabled)
         case .blackYellow:
-            setTitleColor(.themeYellowY, for: .normal)
-            setTitleColor(.themeYellowY, for: .highlighted)
+            setTitleColor(UIColor(.themeYellowDark), for: .normal)
+            setTitleColor(UIColor(.themeYellowDark), for: .highlighted)
             setTitleColor(.themeGray50, for: .disabled)
         }
 
@@ -123,8 +123,8 @@ open class PrimaryButton: UIButton {
                 setImage(image?.withTintColor(.themeDark), for: .highlighted)
                 setImage(image?.withTintColor(.themeGray50), for: .disabled)
             case .blackYellow:
-                setImage(image?.withTintColor(.themeYellowY), for: .normal)
-                setImage(image?.withTintColor(.themeYellowY), for: .highlighted)
+                setImage(image?.withTintColor(UIColor(.themeYellowDark)), for: .normal)
+                setImage(image?.withTintColor(UIColor(.themeYellowDark)), for: .highlighted)
                 setImage(image?.withTintColor(.themeGray50), for: .disabled)
             }
 
