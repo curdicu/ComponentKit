@@ -4,6 +4,8 @@ import SnapKit
 public class SwitchComponent: UIView {
     public let switchView = UISwitch()
 
+    public var thumbTintColor : UIColor? = nil
+    
     public var onSwitch: ((Bool) -> ())?
     
     public var blockSwitch: ((UISwitch) -> ())?
@@ -22,9 +24,12 @@ public class SwitchComponent: UIView {
         switchView.tintColor = .themeSteel20
 //        switchView.onTintColor = .themeYellowD
         switchView.onTintColor = .themeBlack
+        if (thumbTintColor != nil) {
+            switchView.thumbTintColor = thumbTintColor
+        }
+        
         switchView.addTarget(self, action: #selector(onToggle), for: .valueChanged)
         
-        blockSwitch?(switchView)
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -32,6 +37,9 @@ public class SwitchComponent: UIView {
     }
 
     @objc private func onToggle() {
+        if (thumbTintColor != nil) {
+            switchView.thumbTintColor = thumbTintColor
+        }
         onSwitch?(switchView.isOn)
         blockSwitch?(switchView)
     }
