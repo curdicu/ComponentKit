@@ -3,12 +3,8 @@ import SnapKit
 
 public class SwitchComponent: UIView {
     public let switchView = UISwitch()
-
-    public var thumbTintColor : UIColor? = nil
     
     public var onSwitch: ((Bool) -> ())?
-    
-    public var blockSwitch: ((UISwitch) -> ())?
 
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,15 +17,20 @@ public class SwitchComponent: UIView {
 
         switchView.setContentCompressionResistancePriority(.required, for: .horizontal)
         switchView.setContentHuggingPriority(.required, for: .horizontal)
-        switchView.tintColor = .themeSteel20
+//        switchView.tintColor = .themeSteel20
 //        switchView.onTintColor = .themeYellowD
-        switchView.onTintColor = .themeBlack
-        if (thumbTintColor != nil) {
-            switchView.thumbTintColor = thumbTintColor
-        }
+//        switchView.onTintColor = .themeBlack
+        switchView.tintColor = .themeDark96
+        switchView.onTintColor = .themeDark96
+        switchView.thumbTintColor = switchView.isOn ? .themeYellowY : .themeGray
         
         switchView.addTarget(self, action: #selector(onToggle), for: .valueChanged)
         
+    }
+    
+    public var thumbTintColor: UIColor? {
+        get { switchView.thumbTintColor }
+        set { switchView.thumbTintColor = newValue }
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -37,11 +38,9 @@ public class SwitchComponent: UIView {
     }
 
     @objc private func onToggle() {
-        if (thumbTintColor != nil) {
-            switchView.thumbTintColor = thumbTintColor
-        }
         onSwitch?(switchView.isOn)
-        blockSwitch?(switchView)
+        
+        switchView.thumbTintColor = switchView.isOn ? .themeYellowY : .themeGray
     }
 
 }
