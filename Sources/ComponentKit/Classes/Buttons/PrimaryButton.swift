@@ -67,8 +67,8 @@ open class PrimaryButton: UIButton {
             setBackgroundColor(.themeCyanD, for: .highlighted)
             setBackgroundColor(.themeSteel20, for: .disabled)
         case .blackYellow:
-            setBackgroundColor(.themeBlack, for: .normal)
-            setBackgroundColor(.themeBlack, for: .highlighted)
+            setBackgroundColor(.themeDarkYellow, for: .normal)
+            setBackgroundColor(.themeDarkYellow, for: .highlighted)
             setBackgroundColor(.themeSteel20, for: .disabled)
         }
 
