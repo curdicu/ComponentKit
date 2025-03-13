@@ -606,8 +606,12 @@ extension CellsController: SectionsDataSource {
                     },
                     .switch { component in
                         component.switchView.isOn = true
+                        component.thumbTintColor = component.switchView.isOn ? .themeYellowY : .themeGray
                         component.onSwitch = {
                             print("Did toggle switch: \($0)")
+                        }
+                        component.blockSwitch = {switchView in
+                            switchView.thumbTintColor = switchView.isOn ? .themeYellowY : .themeGray
                         }
                     }
                 ]),

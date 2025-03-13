@@ -5,6 +5,8 @@ public class SwitchComponent: UIView {
     public let switchView = UISwitch()
     
     public var onSwitch: ((Bool) -> ())?
+    
+    public var blockSwitch: ((UISwitch) -> ())?
 
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,15 +19,12 @@ public class SwitchComponent: UIView {
 
         switchView.setContentCompressionResistancePriority(.required, for: .horizontal)
         switchView.setContentHuggingPriority(.required, for: .horizontal)
-//        switchView.tintColor = .themeSteel20
-//        switchView.onTintColor = .themeYellowD
-//        switchView.onTintColor = .themeBlack
-        switchView.tintColor = .themeDark96
-        switchView.onTintColor = .themeDark96
-        switchView.thumbTintColor = switchView.isOn ? .themeYellowY : .themeGray
+        switchView.tintColor = .themeSteel20
+        switchView.onTintColor = .themeBlack
         
         switchView.addTarget(self, action: #selector(onToggle), for: .valueChanged)
         
+        onBlockSwitch()
     }
     
     public var thumbTintColor: UIColor? {
@@ -40,7 +39,13 @@ public class SwitchComponent: UIView {
     @objc private func onToggle() {
         onSwitch?(switchView.isOn)
         
-        switchView.thumbTintColor = switchView.isOn ? .themeYellowY : .themeGray
+        onBlockSwitch()
+    }
+    
+    @objc private func onBlockSwitch() {
+        
+        blockSwitch?(switchView)
+        
     }
 
 }
