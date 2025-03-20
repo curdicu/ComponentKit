@@ -33,4 +33,10 @@ open class SubtitleHeaderFooterView: UITableViewHeaderFooterView {
 
 extension SubtitleHeaderFooterView {
     public static let height: CGFloat = .margin32
+    
+    var textAlignment: NSTextAlignment {
+        get { label.textAlignment }
+        set { label.textAlignment = newValue }
+    }
+    
 }
