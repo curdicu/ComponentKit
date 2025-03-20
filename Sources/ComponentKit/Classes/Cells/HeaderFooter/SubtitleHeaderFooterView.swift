@@ -24,8 +24,9 @@ open class SubtitleHeaderFooterView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    open func bind(text: String?, backgroundColor: UIColor = .clear) {
+    open func bind(text: String?, backgroundColor: UIColor = .clear, textAlignment: NSTextAlignment = .left) {
         label.text = text?.uppercased()
+        label.textAlignment = textAlignment
         backgroundView?.backgroundColor = backgroundColor
     }
 
