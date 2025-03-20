@@ -24,8 +24,9 @@ open class SubtitleHeaderFooterView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    open func bind(text: String?, backgroundColor: UIColor = .clear, textAlignment: NSTextAlignment = .left) {
+    open func bind(text: String?, backgroundColor: UIColor = .clear, textAlignment: NSTextAlignment = .left, font:UIFont?) {
         label.text = text?.uppercased()
+        label.font = font
         label.textAlignment = textAlignment
         backgroundView?.backgroundColor = backgroundColor
     }
@@ -34,10 +35,5 @@ open class SubtitleHeaderFooterView: UITableViewHeaderFooterView {
 
 extension SubtitleHeaderFooterView {
     public static let height: CGFloat = .margin32
-    
-    var textAlignment: NSTextAlignment {
-        get { label.textAlignment }
-        set { label.textAlignment = newValue }
-    }
     
 }
