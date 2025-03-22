@@ -134,6 +134,16 @@ open class PrimaryButton: UIButton {
 
             spinner.isHidden = true
             spinner.stopAnimating()
+        case .noTintIcon(let image):
+            setImage(image, for: .normal)
+            setImage(image, for: .highlighted)
+            setImage(image, for: .disabled)
+            let verticalPadding = (height - CGFloat.iconSize24) / 2
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: Self.imageMargin)
+            contentEdgeInsets = UIEdgeInsets(top: verticalPadding, left: Self.leftPaddingWithImage, bottom: verticalPadding, right: Self.rightPaddingWithImage)
+
+            spinner.isHidden = true
+            spinner.stopAnimating()
         case .spinner:
             setImage(nil, for: .normal)
             setImage(nil, for: .highlighted)
@@ -169,6 +179,7 @@ open class PrimaryButton: UIButton {
 
     public enum AccessoryType {
         case icon(image: UIImage?)
+        case noTintIcon(image: UIImage?)
         case spinner
         case none
     }
