@@ -3,7 +3,7 @@ import SnapKit
 import Kingfisher
 import HUD
 
-public class TransactionImageComponent: UIView {
+open class TransactionImageComponent: UIView {
     private let spinner = HUDProgressView(
             progress: 0,
             strokeLineWidth: 2,
