@@ -20,7 +20,7 @@ open class TransactionImageComponent: UIView {
     private let frontImageMask = UIView()
     private let frontImageView = UIImageView()
 
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         addSubview(spinner)
